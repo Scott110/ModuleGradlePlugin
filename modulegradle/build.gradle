@@ -11,8 +11,10 @@ apply plugin: 'groovy'
 
 
 ext {
+
     bintrayRepo = 'maven'
     bintrayName = 'modulegradle'
+
 
     publishedGroupId = 'com.zto.gradleplugin'
     libraryName = 'modulegradle'
@@ -20,13 +22,13 @@ ext {
 
     libraryDescription = 'a plugin for android component '
 
-    siteUrl = 'https://github.com/zhangke3016/CircleLoading'
-    gitUrl = 'https://github.com/zhangke3016/CircleLoading.git'
+    siteUrl = 'https://github.com/Scott110/ModuleGradlePlugin'
+    gitUrl = 'https://github.com/Scott110/ModuleGradlePlugin.git'
 
-    libraryVersion = '0.0.1'
+    libraryVersion = '0.0.3'
 
-    developerId = 'scott01'
-    developerName = 'scott'
+    developerId = 'scott_he'
+    developerName = 'scott01'
     developerEmail = 'heshtjs@126.com'
 
     licenseName = 'The Apache Software License, Version 2.0'
@@ -35,6 +37,10 @@ ext {
 }
 
 
+/*bintray {
+    user='scott01'
+    key='faae7f3274800e5d0bfa06d1c3335781254bbcd4'
+}*/
 
 
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
