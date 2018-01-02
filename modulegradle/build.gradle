@@ -11,7 +11,6 @@ apply plugin: 'groovy'
 
 
 ext {
-
     bintrayRepo = 'maven'
     bintrayName = 'modulegradle'
 
@@ -25,7 +24,7 @@ ext {
     siteUrl = 'https://github.com/Scott110/ModuleGradlePlugin'
     gitUrl = 'https://github.com/Scott110/ModuleGradlePlugin.git'
 
-    libraryVersion = '0.0.3'
+    libraryVersion = '1.0.0'
 
     developerId = 'scott_he'
     developerName = 'scott01'
@@ -37,12 +36,9 @@ ext {
 }
 
 
-/*bintray {
-    user='scott01'
-    key='faae7f3274800e5d0bfa06d1c3335781254bbcd4'
-}*/
 
 
+//上传到jcenter
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
 
