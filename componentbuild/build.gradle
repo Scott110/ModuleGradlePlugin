@@ -1,0 +1,64 @@
+
+plugins {
+    //jcenter 上传相关 gradle 2.1 以后的配置
+    id "com.jfrog.artifactory" version "4.6.0"
+    id "com.github.dcendents.android-maven" version "2.0"
+    id "com.jfrog.bintray" version "1.7.3"
+}
+
+apply plugin: 'groovy'
+
+
+//本地库设置
+/*
+group='com.zto.plugin'
+version='0.0.2'
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('../repo'))
+        }
+    }
+}*/
+
+//远程库设置
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'componentPlugin'
+
+    publishedGroupId = 'com.zto.plugin'
+    libraryName = 'complugin'
+    artifact = 'complugin'
+    artifactId="complugin"
+
+    libraryDescription = 'a plugin for android component '
+
+    siteUrl = 'https://github.com/Scott110/ModuleGradlePlugin'
+    gitUrl = 'https://github.com/Scott110/ModuleGradlePlugin.git'
+
+    libraryVersion = '0.0.1'
+
+    developerId = 'scott_he'
+    developerName = 'scott01'
+    developerEmail = 'heshtjs@126.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+//上传到jcenter
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+
+
+dependencies {
+    compile 'com.android.tools.build:gradle:3.0.1'
+    compile group: 'org.javassist', name: 'javassist', version: '3.20.0-GA'
+    //gradle sdk
+    compile gradleApi()
+    //groovy sdk
+    compile localGroovy()
+
+
+}

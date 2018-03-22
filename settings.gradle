@@ -1,1 +1,1 @@
-include ':app', ':modulegradle'
+include ':app', ':componenttest', ':componentbuild', ':componentlib'
